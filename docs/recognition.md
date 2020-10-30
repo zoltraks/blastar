@@ -199,15 +199,10 @@ Comment.
 310 READM$
 320 T$=T$+CHR$(VAL("&B"+M$))
 330 NEXTR
-```
-
-It's reading next data in a loop of ``R`` from listing below to a ``M$`` variable and adds it to a ``T$`` variable to be used below.  
-
-```
 340 SPRITE$(1)=T$
 ```
 
-Here it's settings sprite 1 graphics data.
+It's reading next data in a loop of ``R`` from listing below to a ``M$`` variable and adds it to a ``T$`` variable to be used to set first sprite number 1.
 
 ```
 350 FORT=1TO8
