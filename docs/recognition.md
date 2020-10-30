@@ -262,7 +262,7 @@ Warming up.
 610 SPRITEON
 ```
 
-Ok, here we are. Line ``620`` is the big player here. It acts like a main loop of a game.
+Ok, here we are. Line ``620`` is the big player. It acts like a main loop of a game.
 
 ```
 620 F=STRIG(1)
@@ -291,11 +291,17 @@ Ok, here we are. Line ``620`` is the big player here. It acts like a main loop o
 850 GOTO620
 ```
 
-And rest is still to be made...
-
+But wait here. What is that?
 
 ```
+790 IFY=1THENRETURN
+```
 
+There were no ``Y`` variable yet. And that ``RETURN`` can not work unless your code was called with ``GOSUB``. But later on we'll figure it out.
+
+> And rest is still to be made...
+
+```
 860 ' SHOOT ROCKETS
 870 U=P:W=C-5
 880 PLAY"O4V6L50DL30F"
