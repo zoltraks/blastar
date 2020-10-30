@@ -1,3 +1,7 @@
+Here I will try to describe how to understand the original author's (Elon Musk) code.
+
+Original code can be found [here](blastar.txt).
+
 At first I thought it was just MSX BASIC program for some MSX compatible machine.
 After some digging and hints from article I originally found source listing for that game it came out, that originally it was made for Spectravideo [SVI-328 MKII](http://www.samdal.com/svi328mkii.htm) machine.
 
@@ -102,6 +106,8 @@ Basically it's a simple tune of C, E, C, E, C, D, B, A... in lower and higher oc
 130 SCREEN1,2
 ```
 
+This one is setting display mode to 1 (text) and sprite size to 2 which is 8 by 8 pixels, magnified to 16 by 16 pixels.
+
 ```
 140 PRINT"  BY E.R.MUSK"
 ```
@@ -123,9 +129,33 @@ Rest is going to be made...
 ```
 170 LOCATE10,5:PRINT"              BLASTAR":PRINT:PRINT"         DO YOU NEED INSTRUCTIONS"
 180 PRINT"                 (Y/N)"
+```
+
+Okay, ``LOCATE`` where usually it takes up to three parameters of byte (0-255) for X, Y cords and cursor mode. This one is putting cursor to 10th column and 5th row to print small "BLASTAR" title and a question.
+
+Yeah, spaces in first ``PRINT`` makes no sense while you could just change X position in ``LOCATE`` but anyway. 
+
+```
 190 LETE$=INKEY$
+```
+
+This one should be read as ``LET E$ = INKEY$`` where ``INKEY$`` is a special variable of currently pressed key.
+
+```
 200 IFE$=""THEN190
+```
+
+So this is a simple loop to wait for any key.
+
+```
 210 BEEP
+```
+
+We're beeping now.
+
+Rest is still to be made...
+
+```
 220 IFE$="Y"ORE$="y"THEN250
 230 GOTO280
 240 ' INSTRUCTIONS
