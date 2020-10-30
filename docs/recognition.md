@@ -251,7 +251,7 @@ Similar code for sprite number 4.
 
 And for last sprite number 5.
 
-And rest is still to be made...
+Warming up.
 
 ```
 560 ' MAIN PROGRAM
@@ -260,6 +260,11 @@ And rest is still to be made...
 590 LETP=120:C=180
 600 H=30:G=15
 610 SPRITEON
+```
+
+Ok, here we are. Line ``620`` is the big player here. It acts like a main loop of a game.
+
+```
 620 F=STRIG(1)
 630 D=STICK(1)
 640 PUTSPRITE3,(H,G),14,3
@@ -284,6 +289,13 @@ And rest is still to be made...
 830 IFH>250THENH=10
 840 IFF=-1THEN870
 850 GOTO620
+```
+
+And rest is still to be made...
+
+
+```
+
 860 ' SHOOT ROCKETS
 870 U=P:W=C-5
 880 PLAY"O4V6L50DL30F"
