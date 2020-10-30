@@ -299,8 +299,6 @@ But wait here. What is that?
 
 There were no ``Y`` variable yet. And that ``RETURN`` can not work unless your code was called with ``GOSUB``. But later on we'll figure it out.
 
-> And rest is still to be made...
-
 ```
 860 ' SHOOT ROCKETS
 870 U=P:W=C-5
@@ -336,6 +334,21 @@ There were no ``Y`` variable yet. And that ``RETURN`` can not work unless your c
 1210 A$=INKEY$:IFA$=""THEN1210
 1220 IFA$="Y"ORA$="y"THENRUN
 1230 END
+```
+
+The last but not least is the data for sprites read before.
+
+You might want to see how these data becomes sprites.
+
+![](../media/sprite1.png)
+
+![](../media/sprite2.png)
+
+![](../media/sprite3.png)
+
+![](../media/sprite4.png)
+
+```
 1250 ' SPRITE DATA
 1260 DATA10011001
 1270 DATA10011001
@@ -378,3 +391,11 @@ There were no ``Y`` variable yet. And that ``RETURN`` can not work unless your c
 1640 DATA00010000
 1650 DATA00000000
 ```
+
+The game has a problem. Sometimes enemy appears below our ship. That can stick our game.
+
+![](../media/fault.png)
+
+![](../media/stick.png)
+
+But I guess that might be a problem of implementation.
