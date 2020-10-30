@@ -207,9 +207,7 @@ It's reading next data in a loop of ``R`` from listing below to a ``M$`` variabl
 340 SPRITE$(1)=T$
 ```
 
-Here it's settings sprite graphics data.
-
-And rest is still to be made...
+Here it's settings sprite 1 graphics data.
 
 ```
 350 FORT=1TO8
@@ -217,22 +215,49 @@ And rest is still to be made...
 370 D$=D$+CHR$(VAL("&B"+S$))
 380 NEXTT
 390 SPRITE$(2)=D$
+```
+
+Similar code for sprite number 2.
+
+```
 400 ONINTERVAL=30GOSUB650
+```
+
+Tricky part.
+
+```
 410 FORR=1TO8
 420 READX$
 430 V$=V$+CHR$(VAL("&B"+X$))
 440 NEXTR
 450 SPRITE$(3)=V$
+```
+
+Similar code for sprite number 3.
+
+```
 460 FORY=1TO8
 470 READY$
 480 N$=N$+CHR$(VAL("&B"+Y$))
 490 NEXTY
 500 SPRITE$(4)=N$
+```
+
+Similar code for sprite number 4.
+
+```
 510 FORT=1TO8
 520 READL$
 530 J$=J$+CHR$(VAL("&B"+L$))
 540 NEXTT
 550 SPRITE$(5)=J$
+```
+
+And for last sprite number 5.
+
+And rest is still to be made...
+
+```
 560 ' MAIN PROGRAM
 570 LOCATE0,0
 580 PRINT"   SCORE";SC;"           SHIPS";SH
