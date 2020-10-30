@@ -135,6 +135,8 @@ Okay, ``LOCATE`` where usually it takes up to three parameters of byte (0-255) f
 
 Yeah, spaces in first ``PRINT`` makes no sense while you could just change X position in ``LOCATE`` but anyway. 
 
+So this one is asking if we need any instructions.
+
 ```
 190 LETE$=INKEY$
 ```
@@ -153,16 +155,36 @@ So this is a simple loop to wait for any key.
 
 We're beeping now.
 
-Rest is still to be made...
-
 ```
 220 IFE$="Y"ORE$="y"THEN250
 230 GOTO280
+```
+
+So when ``Y`` was pressed, thenwe're going for instructions, otherwise we're going further to line 280 described below.
+
+```
 240 ' INSTRUCTIONS
+```
+
+Just a comment.
+
+```
 250 SCREEN1:CIRCLE(45,90),0:DRAW"u80r180d80l180"
 260 PRINT:PRINT:PRINT:PRINT"        <       USE JOYSTICK        >":PRINT:PRINT"               FOR CONTROL AND":PRINT:PRINT"                 FIRE BUTTON":PRINT:PRINT"                  TO SHOOT"
 265 PRINT:PRINT:PRINT:PRINT"    MISSION:DESTROY ALIEN FREIGHTER":PRINT:PRINT"    CARRYING DEADLY HYDROGEN BOMBS":PRINT:PRINT"    AND STATUS BEAM MACHINES"
+```
+
+These are our instructions.
+
+```
 270 IFINKEY$=""THEN270
+```
+
+Simple loop to wait for any key.
+
+And rest is still to be made...
+
+```
 280 CLS
 290 ' CREATE SPRITES
 300 FORR=1TO8
