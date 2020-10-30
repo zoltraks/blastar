@@ -348,15 +348,22 @@ This one is also important for the beam shoot by alien.
 
 The last but not least is the data for sprites read before.
 
-You might want to see how these data becomes sprites.
+You might want to see how these data becomes sprites, so here they are.
 
+Ship data, lines 1260 - 1330.
+
+![](../media/sprite4.png)
+
+An alien, lines 1420 - 1490  
 ![](../media/sprite1.png)
 
-![](../media/sprite2.png)
+Lines 1500 - 1570.
 
 ![](../media/sprite3.png)
 
-![](../media/sprite4.png)
+Diamond (bullet from alien), lines 1580 - 1650.
+
+![](../media/sprite2.png)
 
 ```
 1250 ' SPRITE DATA
