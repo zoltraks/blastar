@@ -424,7 +424,7 @@ Diamond (bullet from alien), lines 1580 - 1650.
 1650 DATA00000000
 ```
 
-The game has a problem. Sometimes enemy appears below our ship. That can result in game stucked.
+The game has a problem. Sometimes enemy appears below our ship. That can result in game being stuck.
 
 ![](../media/fault.png)
 
