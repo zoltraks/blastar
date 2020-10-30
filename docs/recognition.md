@@ -182,16 +182,32 @@ These are our instructions.
 
 Simple loop to wait for any key.
 
-And rest is still to be made...
-
 ```
 280 CLS
+```
+
+```
 290 ' CREATE SPRITES
+```
+
+```
 300 FORR=1TO8
 310 READM$
 320 T$=T$+CHR$(VAL("&B"+M$))
 330 NEXTR
+```
+
+It's reading next data in a loop of ``R`` from listing below to a ``M$`` variable and adds it to a ``T$`` variable to be used below.  
+
+```
 340 SPRITE$(1)=T$
+```
+
+Here it's settings sprite graphics data.
+
+And rest is still to be made...
+
+```
 350 FORT=1TO8
 360 READS$
 370 D$=D$+CHR$(VAL("&B"+S$))
