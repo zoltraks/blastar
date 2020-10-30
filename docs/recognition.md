@@ -203,6 +203,7 @@ Comment.
 ```
 
 It's reading next data in a loop of ``R`` from listing below to a ``M$`` variable and adds it to a ``T$`` variable to be used to set first sprite number 1.
+What's important here is how [``VAL``](https://www.msx.org/wiki/VAL()) function is being used.
 
 ```
 350 FORT=1TO8
