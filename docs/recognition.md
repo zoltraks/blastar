@@ -219,7 +219,7 @@ Similar code for sprite number 2.
 400 ONINTERVAL=30GOSUB650
 ```
 
-Tricky part.
+Tricky part but interesting one. Taken from [these docs](https://www.msx.org/wiki/ON_INTERVAL_GOSUB) its calling a subroutine after specified timeout (counted as a number of 1/60 for NTSC or 1/50 for PAL seconds). In this case it's most like half a second.  
 
 ```
 410 FORR=1TO8
@@ -314,8 +314,18 @@ There were no ``Y`` variable yet. And that ``RETURN`` can not work unless your c
 990 IFF=-1THEN870
 1000 IFW<-10THEN620
 1010 GOTO890
+```
+
+Collision detection?
+
+```
 1020 IFW=C-5THEN940
 1030 SC=SC+80:FORA=1TO20:PUTSPRITE4,(H,G),14,4:NEXTA:CLS:LOCATE3,0:PRINT"SCORE";SC;"            SHIPS ";SH:SPRITEOFF:G=20+INT(150*RND(-TIME)):GOTO620
+```
+
+This one is also important for the beam shoot by alien.
+
+```
 1040 '  ALIEN STATUS BEAM/ROCKET BOMB
 1050 OO=H:NN=G+5
 1060 :
