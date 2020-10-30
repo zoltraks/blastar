@@ -355,6 +355,11 @@ This one is also important for the beam shoot by alien.
 1170 GOTO1060
 1180 SH=SH-1:FORT=1TO60:NEXTT:CLS:LOCATE0,3:PRINT"SCORE ";SC;"             SHIPS ";SH:PUTSPRITE5,(128,205),14,5:PUTSPRITE4,(P,C),8,5:G=20+INT(170*RND(-TIME)):H=0: SPRITEOFF:IFSH<0THEN1200
 1190 GOTO620
+```
+
+And here we're at the end. Nice trick to use ``ORA`` and ``RUN`` together. Not so obvious for other BASIC implementations.
+
+```
 1200 CLS:LOCATE0,0:PRINT"                  BLASTAR":PRINT:PRINT"             FLEET DESTROYED":PRINT:PRINT"      WOULD YOU LIKE ANOTHER GAME"
 1210 A$=INKEY$:IFA$=""THEN1210
 1220 IFA$="Y"ORA$="y"THENRUN
