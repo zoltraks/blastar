@@ -267,7 +267,17 @@ Ok, here we are. Line ``620`` is the big player. It acts like a main loop of a g
 ```
 620 F=STRIG(1)
 630 D=STICK(1)
+```
+
+Like in other BASIC implementations, ``STICK`` is for getting joystick position and ``STRIG`` for fire button pressed. 
+
+```
 640 PUTSPRITE3,(H,G),14,3
+```
+
+Moving a sprite 3 into position.
+
+```
 650 IFD=0THEN740
 660 IFD=1THENP=P+0:C=C-4
 670 IFD=2THENP=P+2:C=C-2
@@ -277,6 +287,11 @@ Ok, here we are. Line ``620`` is the big player. It acts like a main loop of a g
 710 IFD=6THENP=P-2:C=C+2
 720 IFD=7THENP=P-4:C=C+0
 730 IFD=8THENP=P-2:C=C-2
+```
+
+A friend of mine told me, that probably it's a code first versions of Tesla software was used for autopilot. :-)
+
+```
 740 PUTSPRITE0,(P,C),14,1
 750 IFC<10THENC=10
 760 IFC>190THENC=180
