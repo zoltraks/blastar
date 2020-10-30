@@ -186,9 +186,13 @@ Simple loop to wait for any key.
 280 CLS
 ```
 
+Clearing screen.
+
 ```
 290 ' CREATE SPRITES
 ```
+
+Comment.
 
 ```
 300 FORR=1TO8
