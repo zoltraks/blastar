@@ -1,3 +1,6 @@
+Recognition
+===========
+
 Here I will try to describe how to understand the original author's (Elon Musk) code.
 
 Original code can be found [here](blastar.txt).
@@ -36,7 +39,7 @@ Let's look at MSX color pallete at this point.
 | 14     | #cccccc | gray         |
 | 15     | #ffffff | white        |
 
-Ok, this one was obvious.
+Ok, this one was obvious although I couldn't find the purpose of using border color parameter.
 
 ```
 10 SH=5
@@ -98,9 +101,12 @@ Let's look how ``PLAY`` works. It's a string of macro language instructions whic
 
 It consist of notes ``"C"``, ``"C+"`` or ``"C#"`` (C sharp), ``"D-"`` (D flat), ``"D"``, ``"E"``, ``"F"``, ``"G"``, ``"A"``, ``"B"``, with optional octave number 1-8 (default 4) and optional dots increasing length by 1,5 each dot, like ``"F#4.."``.
 
-Additional operation used here are ``"O3"`` which changes default octave to 3, ``"L50"`` which sets the note length to 50. More you can read [here](https://www.msx.org/wiki/PLAY#Syntax).
+Additional operation used here are ``"O3"`` which changes default octave to 3, ``"L50"`` which sets the note length to 1/50 of a length of full note I guess.
+More you can read [here](https://www.msx.org/wiki/PLAY#Syntax).
 
 Basically it's a simple tune of C, E, C, E, C, D, B, A... in lower and higher octave twice.
+
+For ``"Lxx"`` you may use values from 1 to 64 (higher, the shorter), other values will throw an error "Illegal function call".
 
 ```
 130 SCREEN1,2
